@@ -2,6 +2,7 @@
 
 import { useContext, MouseEventHandler, ReactNode } from 'react';
 import { DropdownContext } from './Dropdown';
+import cn from '@/utils/cn';
 
 interface ItemProps {
   children: ReactNode;
@@ -20,7 +21,7 @@ const Item = ({ children, onClick, className }: ItemProps) => {
   return (
     <button
       type='button'
-      className={`text-16-m text-center hover:bg-gray-100 ${className ?? ''}`}
+      className={cn('text-16-m text-center hover:bg-gray-100', className ?? '')}
       onClick={handleClick}
     >
       {children}

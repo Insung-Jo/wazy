@@ -2,6 +2,7 @@
 
 import { ReactNode, useContext } from 'react';
 import { DropdownContext } from './Dropdown';
+import cn from '@/utils/cn';
 
 interface ContentProps {
   children: ReactNode;
@@ -14,9 +15,10 @@ const Content = ({ children, className }: ContentProps) => {
 
   return (
     <div
-      className={`flex flex-col border-2 border-[#DFDFDF] z-1 w-95 absolute mt-2 rounded-lg bg-white shadow-md ${
-        className ?? ''
-      }`}
+      className={cn(
+        'absolute z-1 mt-2 flex w-95 flex-col rounded-lg border-2 border-[#DFDFDF] bg-white shadow-md',
+        className ?? '',
+      )}
     >
       {children}
     </div>
