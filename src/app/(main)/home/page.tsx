@@ -4,11 +4,8 @@ import AllActivities from '@/components/home/AllActivities';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'WAZY | 체험 예약 플랫폼',
-  description: '코드노마드 팀프로젝트',
-  icons: {
-    icon: '/favicon.ico',
-  },
+  title: '홈',
+  description: '다양한 체험과 액티비티를 둘러보고 예약하세요.',
 };
 
 export default function Home() {
