@@ -57,26 +57,21 @@ const TimeDropdown = ({
           </span>
         </Dropdown.Trigger>
 
-        <Dropdown.Content>
-          <div
-            className='absolute top-full left-0 z-10 mt-10 flex max-h-240 w-124.5 flex-col overflow-y-auto rounded-2xl bg-white p-12 outline-1 outline-offset-[-1px] outline-gray-100 md:w-122'
-            role='listbox'
-            aria-label='시간 옵션 목록'
-          >
-            {options.map((opt) => (
-              <Dropdown.Item
-                key={opt.value}
-                onClick={() => handleSelect(opt.value)}
-                className={`flex h-48 w-full items-center justify-between self-stretch rounded-xl px-20 py-16 ${
-                  value === opt.value ? 'bg-sky-100' : ''
-                } focus:ring-primary-500 hover:bg-gray-50 focus:bg-gray-50 focus:ring-2 focus:outline-none`}
-              >
-                <span className='justify-center text-base font-medium text-gray-900'>
-                  {opt.label}
-                </span>
-              </Dropdown.Item>
-            ))}
-          </div>
+        <Dropdown.Content
+          className='left-0 z-10 mt-10 flex max-h-240 w-124.5 flex-col overflow-y-auto rounded-2xl bg-white p-12 outline-1 outline-offset-[-1px] outline-gray-100 md:w-122'
+          aria-label='시간 옵션 목록'
+        >
+          {options.map((opt) => (
+            <Dropdown.Item
+              key={opt.value}
+              onClick={() => handleSelect(opt.value)}
+              className={`flex h-48 w-full items-center justify-between self-stretch rounded-xl px-20 py-16 ${
+                value === opt.value ? 'bg-sky-100' : ''
+              } focus:ring-primary-500 hover:bg-gray-50 focus:bg-gray-50 focus:ring-2 focus:outline-none`}
+            >
+              {opt.label}
+            </Dropdown.Item>
+          ))}
         </Dropdown.Content>
       </Dropdown>
 
