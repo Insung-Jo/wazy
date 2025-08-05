@@ -52,7 +52,7 @@ const SearchContent = () => {
   const totalPages = Math.ceil(totalCount / size);
 
   return (
-    <main className='bg-gradient-main min-h-screen w-full px-20'>
+    <main className='bg-main min-h-screen w-full px-20'>
       <div className='mx-auto max-w-screen-xl pt-40 md:pt-100'>
         <Banner />
 
